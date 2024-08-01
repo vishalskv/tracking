@@ -53,13 +53,17 @@ function Client() {
   };
 
   return (
-    <div className="container-fluid" style={{backgroundColor:"#E4EAEE"}}>
+    <div className="container-fluid" style={{ backgroundColor: "#E4EAEE" }}>
       <div className="d-flex" style={{ justifyContent: "space-between" }}>
         <h3 className="text-center">Client List</h3>
         {!editingClient && (
           <button
             className="btn btn-success"
-            style={{backgroundColor:"#03a9f4", color:"#fefefe",     padding: "1 .75rem"}}
+            style={{
+              backgroundColor: "#03a9f4",
+              color: "#fefefe",
+              padding: "1 .75rem",
+            }}
             onClick={() => setEditingClient({})}
           >
             Add
@@ -211,7 +215,9 @@ const AddClientForm = ({ client, onClientAddedOrUpdated }) => {
 
   return (
     <div className="container-fluid">
-      <h3 className="text-center mb-5">{client?.id ? "UPDATE CLIENT" : "ADD CLIENT"}</h3>
+      <h3 className="text-center mb-5">
+        {client?.id ? "UPDATE CLIENT" : "ADD CLIENT"}
+      </h3>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -293,7 +299,10 @@ const AddClientForm = ({ client, onClientAddedOrUpdated }) => {
               </div>
             </div>
             <div className="row mb-3">
-              <label htmlFor="contactPersonName" className="col-sm-2 col-form-label">
+              <label
+                htmlFor="contactPersonName"
+                className="col-sm-2 col-form-label"
+              >
                 Contact Person Name:
               </label>
               <div className="col-sm-10">
@@ -311,7 +320,10 @@ const AddClientForm = ({ client, onClientAddedOrUpdated }) => {
               </div>
             </div>
             <div className="row mb-3">
-              <label htmlFor="contactNumber" className="col-sm-2 col-form-label">
+              <label
+                htmlFor="contactNumber"
+                className="col-sm-2 col-form-label"
+              >
                 Contact Number:
               </label>
               <div className="col-sm-10">
@@ -357,11 +369,7 @@ const AddClientForm = ({ client, onClientAddedOrUpdated }) => {
                   id="email"
                   name="email"
                 />
-                <ErrorMessage
-                  name="email"
-                  component="div"
-                  className="error"
-                />
+                <ErrorMessage name="email" component="div" className="error" />
               </div>
             </div>
             <div className="text-center">

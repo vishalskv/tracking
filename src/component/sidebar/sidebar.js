@@ -14,6 +14,11 @@ const Sidebar = ({ children }) => {
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
+      path: "/tracking",
+      name: "Tracking",
+      icon: <RxLapTimer size={20} />,
+    },
+    {
       path: "/project-list",
       name: "Projects",
       icon: <GoProjectRoadmap size={20} />,
@@ -23,11 +28,7 @@ const Sidebar = ({ children }) => {
       name: "Clients",
       icon: <AiOutlineTeam size={20} />,
     },
-    {
-      path: "/tracking",
-      name: "Tracking",
-      icon: <RxLapTimer size={20} />,
-    },
+   
   ];
   return (
     <div className="sidebar1">

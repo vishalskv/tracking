@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Sidebar from "./component/sidebar/sidebar";
 import ProList from "./page/project-list";
@@ -13,7 +13,8 @@ const App = () => {
     <>
       <BrowserRouter>
         <Sidebar>
-          <Routes>
+        <Routes>
+            <Route path="/" element={<Navigate to="/tracking" />} />
             <Route path="/project-list" element={<NewDep />} />
             <Route path="/clients" element={<ProList />} />
             <Route path="/tracking" element={<Dashboard />} />
